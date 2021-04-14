@@ -32,4 +32,5 @@ body {
 
 .col:hover {
 	background: #E3DCCC;
+	cursor: pointer;
 }
