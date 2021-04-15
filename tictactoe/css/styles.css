@@ -16,6 +16,7 @@ body {
 
 .player.active {
 	font-weight: bold;
+	color: red;
 }
 
 #table_game {
