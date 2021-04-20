@@ -12,32 +12,46 @@
 		<!-- Names for the players -->
 		<div id="players">
 			<div class="player1 player active">
-				<span class="player1_play">X</span>: <span>Player 1</span>
+				<span class="player1_play">X</span>: <span class="player1_name">Player 1</span>
 			</div>
 			<div class="player2 player">
-				<span class="player2_play">O</span>: <span>Player 2</span>
+				<span class="player2_play">O</span>: <span class="player2_name">Player 2</span>
 			</div>
 		</div>
+
+		<!-- Scores for the players -->
+		<div id="scores">
+			<div class="score">
+				<span class="player1_score">0</span>
+			</div>
+			<div class="score">
+				<span class="player2_score">0</span>
+			</div>
+		</div>
+
+		<!-- message div -->
+		<div id="msg"></div>
 		
 		<!-- Table for the game -->
 		<table id="table_game">
 			<tr>
-				<td class="col"></td>
-				<td class="col"></td>
-				<td class="col"></td>
+				<td class="col a1"></td>
+				<td class="col a2"></td>
+				<td class="col a3"></td>
 			</tr>
 			<tr>
-				<td class="col"></td>
-				<td class="col"></td>
-				<td class="col"></td>
+				<td class="col b1"></td>
+				<td class="col b2"></td>
+				<td class="col b3"></td>
 			</tr>
 			<tr>
-				<td class="col"></td>
-				<td class="col"></td>
-				<td class="col"></td>
+				<td class="col c1"></td>
+				<td class="col c2"></td>
+				<td class="col c3"></td>
 			</tr>
 		</table>
 
+		<script type="text/javascript" src="js/helpers.js"></script>
 		<script type="text/javascript" src="js/app.js"></script>
 	</body>
 </html>
