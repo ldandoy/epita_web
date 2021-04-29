@@ -1,9 +1,12 @@
+require('dotenv').config()
 const express = require('express')
 const morgan  = require('morgan')
 const cors    = require('cors')
 const helmet  = require('helmet')
 
 const productRoute = require('./routes/productsRoutes')
+const notFound = require('./middlewares/notFound')
+const errorHandler = require('./middlewares/ErrorHandler')
 
 const app = express()
 
@@ -19,6 +22,9 @@ app.get('/', (req, res) => {
 })
 
 app.use('/products', productRoute)
+
+app.use(notFound)
+app.use(errorHandler)
 
 app.listen(3000, () => {
     console.log(`Server listen on http://localhost:3000`)
