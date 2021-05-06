@@ -1,5 +1,7 @@
 const { v4: uuidv4 } = require('uuid')
 
+const productModel = require('../models/productSchema')
+
 const express = require('express')
 const Router = express.Router()
 
@@ -15,9 +17,19 @@ Router.get('/:index', (req,res) => {
 })
 
 Router.post('/', function (req, res) {
-    let product = req.body
+    /*let product = req.body
     product.id = uuidv4();
-    products.push(product)
+    products.push(product)*/
+
+    let product = new productModel({
+        name: req.body.name,
+        price: req.body.price
+    })
+
+    product.save()
+    .then(product => {res.status(200).send(product)})
+    .catch(error => {next(error)});
+
     res.status(200).send(product)
 })
 

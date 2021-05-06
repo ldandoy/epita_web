@@ -7,6 +7,9 @@ const helmet  = require('helmet')
 const productRoute = require('./routes/productsRoutes')
 const notFound = require('./middlewares/notFound')
 const errorHandler = require('./middlewares/ErrorHandler')
+const connectDB = require('./middlewares/connectDB')
+
+connectDB()
 
 const app = express()
 
