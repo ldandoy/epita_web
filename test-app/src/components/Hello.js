@@ -24,7 +24,7 @@ const Hello = () => {
     }
 
     return <>
-        <img src="/img/bg.jpg" alt="picture" className={styles.image} />
+        <img src="/img/bg.jpg" alt="logo" className={styles.image} />
         { !showHello && <form onSubmit={submitHandler}>
             <input 
                 type="text" 
