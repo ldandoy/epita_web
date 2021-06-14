@@ -4,10 +4,9 @@ export default () => {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts')
+        fetch(`${process.env.REACT_APP_API_URL}/posts`)
         .then(response => response.json())
         .then(json => {
-            console.log(json)
             setPosts(json)
         })
     }, [])

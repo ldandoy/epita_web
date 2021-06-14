@@ -30,5 +30,5 @@ app.use(notFound)
 app.use(errorHandler)
 
 app.listen(3000, () => {
-    console.log(`Server listen on http://localhost:3000`)
+    console.log(`Server listen on http://localhost:3001`)
 })
