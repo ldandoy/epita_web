@@ -5,7 +5,7 @@ import Products from './pages/Products'
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter forceRefresh={true}>
       <nav>
         <Link to='/'>Accueil</Link>
         <Link to='/products'>Les products</Link>
