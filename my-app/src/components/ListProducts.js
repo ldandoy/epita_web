@@ -1,22 +1,24 @@
 import { useEffect, useState } from 'react'
 
-export default () => {
-    const [posts, setPosts] = useState([])
+const ListProducts = () => {
+    const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}/posts`)
+        fetch(`${process.env.REACT_APP_API_URL}/products`)
         .then(response => response.json())
         .then(json => {
-            setPosts(json)
+            setProducts(json)
         })
     }, [])
 
     return (<>
         <h1>List Products</h1>
         <ul>
-            {posts.map((post) => (
-                <li key={post.id}>{post.title}</li>
+            {products.map((product) => (
+                <li key={product._id}>{product.name}</li>
             ))}
         </ul>
     </>)
 }
+
+export default ListProducts

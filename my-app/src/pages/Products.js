@@ -1,8 +1,10 @@
 import ListProducts from '../components/ListProducts'
 
-export default () => {
+const Products = () => {
     return <section>
-        <h1>Posts</h1>
+        <h1>Products</h1>
         <ListProducts />
     </section>
 }
+
+export default Products
