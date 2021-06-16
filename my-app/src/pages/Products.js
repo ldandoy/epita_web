@@ -1,4 +1,4 @@
-import ListProducts from '../components/ListProducts'
+import ListProducts from '../components/ListProducts/ListProducts'
 import FormAddProduct from '../components/FormAddProduct'
 
 const Products = () => {

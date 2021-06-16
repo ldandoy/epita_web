@@ -11,3 +11,9 @@ section {
   width: 80%;
   margin: auto;
 }
+
+
+a, a:hover, a:focus, a:active {
+  color: purple;
+  text-decoration: none;
+}
