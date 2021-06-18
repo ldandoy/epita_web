@@ -48,6 +48,8 @@ Router.post('/', function (req, res, next) {
 })
 
 Router.put('/:productId', function (req, res, next) {
+    const productId = req.params.productId
+    
     productModel.findOneAndUpdate({
         _id: productId
     }, {

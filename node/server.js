@@ -5,6 +5,8 @@ const cors    = require('cors')
 const helmet  = require('helmet')
 
 const productRoute = require('./routes/productsRoutes')
+const authRoute = require('./routes/authRoutes')
+
 const notFound = require('./middlewares/notFound')
 const errorHandler = require('./middlewares/ErrorHandler')
 const connectDB = require('./middlewares/connectDB')
@@ -25,6 +27,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/products', productRoute)
+app.use('/', authRoute)
 
 app.use(notFound)
 app.use(errorHandler)
