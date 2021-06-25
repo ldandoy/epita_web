@@ -34,7 +34,7 @@ const ListProducts = () => {
         <ul>
             {products.map((product) => (
                 <li key={product._id}>
-                    <Link to={`/products/${product._id}/edit`}>{product.name}</Link>&nbsp;
+                    <Link to={`/products/${product._id}/edit`}>{product.name}: {product.price}&euro;</Link>&nbsp;
                     <span className={styles.delete} onClick={(e) => onClickHandler(product._id)}>X</span>
                 </li>
             ))}
